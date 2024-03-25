@@ -17,14 +17,14 @@ export const ShopContextProvider = (props)=>{
   const [all_product,setall_product] = useState([]);
   const [cartItems,setcartItems] = useState(getDefaultCart());
   useEffect(()=>{
-   fetch('https://shoppey-4.onrender.com/allproducts')
+   fetch('https://backendshopping-qwex.onrender.com/allproducts')
    .then((response)=>response.json())
    .then((data)=>setall_product(data))
 
    
    if(localStorage.getItem('auth-token'))
    {
-       fetch('https://shoppey-4.onrender.com/getcart',{
+       fetch('https://backendshopping-qwex.onrender.com/getcart',{
         method:'POST',
         headers:{
           Accept:'application/form-data',
@@ -43,7 +43,7 @@ export const ShopContextProvider = (props)=>{
        setcartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
        console.log(cartItems);
       if(localStorage.getItem('auth-token')){
-        fetch('https://shoppey-4.onrender.com/addtocart',{
+        fetch('https://backendshopping-qwex.onrender.com/addtocart',{
           method:'POST',
           headers:{
             Accept:'application/form-data',

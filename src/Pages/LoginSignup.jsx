@@ -15,7 +15,7 @@ export const LoginSignup = () => {
   const login = async () => {
     
     let responseData;
-    await fetch('https://shoppey-4.onrender.com/login', {
+    await fetch('https://backendshopping-qwex.onrender.com/login', {
       method: "POST",
       headers: {
         Accept: 'application/form-data',
@@ -35,7 +35,7 @@ export const LoginSignup = () => {
   const signup = async () => {
     
     let responseData;
-    await fetch('https://shoppey-4.onrender.com/signup', {
+    await fetch('https://backendshopping-qwex.onrender.com/signup', {
       method: "POST",
       headers:{
         Accept:'application/form-data',
