@@ -20,7 +20,7 @@ const amount = getTotalCartAmount();
 
 	const initPayment = (data) => {
 		const options = {
-			key:"rzp_test_QVlD8d4I2cj1Ak",
+			key:"rzp_test_UmQnj4z8Jpp3H4",
 			amount: getTotalCartAmount,
 			currency: data.currency,
 			name: book.name,
